@@ -159,7 +159,7 @@ export const editorProps = () => ({
   /**
    * 编辑器唯一标识
    *
-   * @default 'md-editor-v3'
+   * @default 'md-editor-zabiri'
    */
   editorId: {
     type: String as PropType<string>,
@@ -381,6 +381,12 @@ export const editorProps = () => ({
    */
   autoDetectCode: {
     type: Boolean as PropType<boolean>
+  },
+  previewUrl: {
+    type: String as PropType<string>
+  },
+  previewBearer: {
+    type: String as PropType<string>
   }
 });
 
