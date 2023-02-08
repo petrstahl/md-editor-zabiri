@@ -1,6 +1,6 @@
 {
-  "name": "md-editor-v3",
-  "version": "2.7.2",
+  "name": "md-editor-zabiri",
+  "version": "1.0.0",
   "keywords": [
     "vue",
     "vue3",
@@ -18,25 +18,25 @@
     "name": "zbf",
     "url": "https://imzbf.cc"
   },
-  "homepage": "https://imzbf.github.io/md-editor-v3/",
+  "homepage": "https://github.com/petrstahl/md-editor-zabiri/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imzbf/md-editor-v3.git"
+    "url": "git+https://github.com/petrstahl/md-editor-zabiri.git"
   },
   "bugs": {
-    "url": "https://github.com/imzbf/md-editor-v3/issues"
+    "url": "https://github.com/petrstahl/md-editor-zabiri/issues"
   },
   "files": [
     "lib"
   ],
   "type": "module",
   "types": "./lib/MdEditor/index.d.ts",
-  "main": "./lib/md-editor-v3.umd.js",
-  "module": "./lib/md-editor-v3.es.js",
+  "main": "./lib/md-editor-zabiri.umd.js",
+  "module": "./lib/md-editor-zabiri.es.js",
   "exports": {
     ".": {
-      "import": "./lib/md-editor-v3.es.js",
-      "require": "./lib/md-editor-v3.umd.js"
+      "import": "./lib/md-editor-zabiri.es.js",
+      "require": "./lib/md-editor-zabiri.umd.js"
     },
     "./lib/style.css": "./lib/style.css"
   },

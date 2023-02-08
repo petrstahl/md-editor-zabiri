@@ -646,7 +646,7 @@ export default defineComponent({
               <div
                 class={`${prefix}-toolbar-item`}
                 title={ult.value.toolbarTips?.github}
-                onClick={() => goto('https://github.com/imzbf/md-editor-v3')}
+                onClick={() => goto('https://github.com/petrstahl/md-editor-zabiri')}
               >
                 <svg class={`${prefix}-icon`} aria-hidden="true">
                   <use xlinkHref="#md-editor-icon-github" />

@@ -9,7 +9,7 @@ export const contentProps = () => ({
   },
   onChange: {
     type: Function as PropType<(v: string) => void>,
-    default: () => () => {}
+    default: () => {}
   },
   setting: {
     type: Object as PropType<SettingType>,
@@ -17,11 +17,11 @@ export const contentProps = () => ({
   },
   onHtmlChanged: {
     type: Function as PropType<(h: string) => void>,
-    default: () => () => {}
+    default: () => {}
   },
   onGetCatalog: {
     type: Function as PropType<(list: HeadList[]) => void>,
-    default: () => () => {}
+    default: () => {}
   },
   markedHeadingId: {
     type: Function as PropType<MarkedHeadingId>,
@@ -67,6 +67,14 @@ export const contentProps = () => ({
   },
   autoDetectCode: {
     type: Boolean as PropType<boolean>
+  },
+  previewUrl: {
+    type: String as PropType<string>,
+    default: ''
+  },
+  previewBearer: {
+    type: String as PropType<string>,
+    default: ''
   }
 });
 
