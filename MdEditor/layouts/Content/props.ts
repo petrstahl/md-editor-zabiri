@@ -67,6 +67,14 @@ export const contentProps = () => ({
   },
   autoDetectCode: {
     type: Boolean as PropType<boolean>
+  },
+  previewUrl: {
+    type: String as PropType<string>,
+    default: ''
+  },
+  previewBearer: {
+    type: String as PropType<string>,
+    default: ''
   }
 });
 

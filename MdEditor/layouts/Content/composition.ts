@@ -204,6 +204,47 @@ export const useHistory = (
 };
 
 /**
+ * Server side preview.
+ */
+export const useServerSide = (props: ContentProps, mermaidData: any) => {
+  const convertedMd = ref(null);
+
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + props.previewBearer
+    },
+    body: JSON.stringify({ inputFormat: 'MD', outputFormat: 'HTML', input: '-' })
+  };
+
+  const editorId = inject('editorId') as string;
+  const html = ref(props.value);
+
+  const markHtml = debounce(() => {
+    requestOptions.body = JSON.stringify({
+      inputFormat: 'MD',
+      outputFormat: 'HTML',
+      input: props.value
+    });
+    fetch(props.previewUrl, requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        convertedMd.value = data;
+        const convertedValue = convertedMd.value ? convertedMd.value : { output: '' };
+        const _html = convertedValue?.output;
+        html.value = _html;
+        bus.emit(editorId, 'buildFinished', _html);
+        props.onHtmlChanged(_html);
+      });
+  }, 500);
+
+  watch([toRef(props, 'value')], markHtml);
+
+  return { html };
+};
+
+/**
  * markdown编译逻辑
  */
 export const useMarked = (props: ContentProps, mermaidData: any) => {

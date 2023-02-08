@@ -169,21 +169,21 @@ export const directive2flag = (
         break;
       }
       case 'strikeThrough': {
+        targetValue = `~~${selectedText}~~`;
+        deviationStart = 2;
+        deviationEnd = -2;
+        break;
+      }
+      case 'sub': {
         targetValue = `~${selectedText}~`;
         deviationStart = 1;
         deviationEnd = -1;
         break;
       }
-      case 'sub': {
-        targetValue = `<sub>${selectedText}</sub>`;
-        deviationStart = 5;
-        deviationEnd = -6;
-        break;
-      }
       case 'sup': {
-        targetValue = `<sup>${selectedText}</sup>`;
-        deviationStart = 5;
-        deviationEnd = -6;
+        targetValue = `^${selectedText}^`;
+        deviationStart = 1;
+        deviationEnd = -1;
         break;
       }
       case 'codeRow': {
@@ -239,7 +239,7 @@ export const directive2flag = (
         // 添加分隔
         targetValue += '\n|';
         for (let i = 0; i <= y; i++) {
-          targetValue += ' - |';
+          targetValue += ' --- |';
         }
 
         // 添加内容

@@ -8,7 +8,8 @@ import {
   useMermaid,
   usePasteUpload,
   userZoom,
-  useAttach
+  useAttach,
+  useServerSide
 } from './composition';
 import { prefix } from '../../config';
 import bus from '../../utils/event-bus';
@@ -39,7 +40,8 @@ export default defineComponent({
     // mermaid图表
     const mermaidData = useMermaid(props);
     // markdown => html
-    const { html } = useMarked(props, mermaidData);
+    const { html } = useServerSide(props, mermaidData);
+    // const { html } = useMarked(props, mermaidData);
     // 自动滚动
     useAutoScroll(props, html, textAreaRef, previewRef, htmlRef);
     // 自动监听生成md内容

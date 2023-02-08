@@ -1,12 +1,12 @@
-# 🎄 md-editor-v3
+# 🎄 md-editor-zabiri
 
-![](https://img.shields.io/github/package-json/v/imzbf/md-editor-v3) ![](https://img.shields.io/npm/dm/md-editor-v3) ![](https://img.shields.io/bundlephobia/min/md-editor-v3) ![](https://img.shields.io/github/license/imzbf/md-editor-v3) ![](https://img.shields.io/badge/ssr-%3E1.6.0-brightgreen)
+[//]: # (![]&#40;https://img.shields.io/github/package-json/v/imzbf/md-editor-v3&#41; ![]&#40;https://img.shields.io/npm/dm/md-editor-v3&#41; ![]&#40;https://img.shields.io/bundlephobia/min/md-editor-v3&#41; ![]&#40;https://img.shields.io/github/license/imzbf/md-editor-v3&#41; ![]&#40;https://img.shields.io/badge/ssr-%3E1.6.0-brightgreen&#41;)
 
-English \| [中文](https://github.com/imzbf/md-editor-v3/blob/develop/README-CN.md)
+English
 
 Markdown editor for vue3, developed in `jsx` and `typescript`.
 
-- Documentation and example: [Go](https://imzbf.github.io/md-editor-v3)
+- Documentation and example: [Go](https://github.com/petrstahl/md-editor-zabiri)
 
 - Use it online: [Go](https://codesandbox.io/s/epic-bird-2znqo)
 
@@ -28,7 +28,7 @@ Markdown editor for vue3, developed in `jsx` and `typescript`.
 ## 📦 Install
 
 ```shell
-yarn add md-editor-v3
+yarn add md-editor-zabiri
 ```
 
 Please install `@types/marked` in your typescript project if you want to configure `renderer`:
